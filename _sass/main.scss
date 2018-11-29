@@ -1,4 +1,17 @@
+body {
+    margin: 0;
+}
+
 .header {
     background-image: url('../images/Ellipse.png');
-    background-size: cover;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 80vh;
+
+    &__tagline {
+        margin: 0;
+    }
 }
+

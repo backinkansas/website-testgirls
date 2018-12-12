@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+.upcoming-events {
+    &__card {
+        background-color: $light-yellow;
+        font-family: $font-cards;
+        color: $dark-gray;
+        border-radius: 5px;
+        padding: 5px 10px;
+
+        &__date {
+            font-size: 2em;
+            margin: 5px;
+        }
+
+        &__title {
+            font-size: 1.5em;
+            margin: 5px 0;
+        }
+
+        &__link {
+            color: $dark-gray;
+            text-decoration: none;
+        }
+
+        &__description {
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .upcoming-events {
+        &__container {
+            margin: 0 auto;
+            width: 60%;
+        }
+    
+        &__card {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-family: $font-cards;
+            color: $dark-gray;
+    
+            &__date {
+                width: 50px;
+                text-align: center;
+            }
+    
+            &__content {
+                width: 80%;
+                margin: 0;
+            }
+    
+            &__title {
+                display: inline-block;
+                letter-spacing: 1.5px;
+            }
+    
+            &__description {
+                font-size: 1em;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

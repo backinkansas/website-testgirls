@@ -7,6 +7,8 @@
     <title>{{ page.title }}</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="/assets/js/meetupAPI.js"></script>
   </head>
   <body>
     <header class="header">
@@ -14,6 +16,11 @@
       <h2 class="header__tagline">Qualidade & automação</h2>
       <h2 class="header__tagline--side">}</h2>
     </header>
+
+    <section class="upcoming-events section-body">
+      <h3 class="upcoming-events__title section-tittle">Próximos eventos</h3>
+      <div class="upcoming-events__container"></div>
+    </section>
     {{ content }}
   </body>
 </html>

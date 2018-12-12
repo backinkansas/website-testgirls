@@ -1,0 +1,20 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.section-body {
+    width: 70%;
+    margin: 10px auto;
+
+    .section-tittle {
+        font-family: $font-titles;
+        color: $dark-gray;
+        text-align: center;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &:after {
+            @extend %red-border;
+        }
+    }
+}

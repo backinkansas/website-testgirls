@@ -5,7 +5,7 @@
     background-size: 100% 80%;
     background-position: center top;
     background-repeat: no-repeat;
-    width: 100vw;
+    // width: 100vw;
     height: 60vh;
     position: relative;
     font-family: $font-titles;
@@ -34,7 +34,7 @@
 
 }
 
-@media (min-width: 600px){
+@media (min-width: 600px) {
     .header {
         height: 75vh;
         background-size: 100% 95%;

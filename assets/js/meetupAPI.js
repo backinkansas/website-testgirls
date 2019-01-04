@@ -22,21 +22,20 @@ function handleDate(date) {
 function handleDescription(text) {
 	return text.slice(3, 130)
 }
-  
-function createEventMarkup(result) {
-	const eventContainer = document.getElementsByClassName('upcoming-events__container')[0]
 
-	if (result.data.length == 0) {
-		eventContainer.innerHTML = `<p class="upcoming-events__card__description">Ainda não há eventos marcados...</p>`
+function createMarkUp(container, collection) {
+
+	if (collection.length == 0) {
+		container.innerHTML = `<p class="upcoming-events__card__description">Ainda não há eventos marcados...</p>`
 		return
 	}
-	const event = result.data[0]
 
+	const event = collection[0]
 	const originalDate = new Date(event.time)
 	const date = handleDate(originalDate)
 	const eventText = handleDescription(event.description)
 
-	eventContainer.innerHTML = `
+	container.innerHTML = `
 	<div class="upcoming-events__card">
 		<h4 class="upcoming-events__card__date">${date}</h4>
 		<div class="upcoming-events__card__content">
@@ -47,6 +46,12 @@ function createEventMarkup(result) {
 		</div>
 	</div>`
 }
+  
+function distribute(result) {
+	const eventContainer = document.getElementsByClassName('upcoming-events__container')[0]
+
+	createMarkUp(eventContainer, result.data)
+}
 
 function fetchEvents(url) {
 	$.ajax({
@@ -54,7 +59,7 @@ function fetchEvents(url) {
 		method:'get',
 		url:url,
 		success:function(result) {
-			createEventMarkup(result)
+			distribute(result)
 		}
 	});	
 }

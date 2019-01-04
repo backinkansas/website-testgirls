@@ -24,12 +24,18 @@ function handleDescription(text) {
 }
   
 function createEventMarkup(result) {
+	const eventContainer = document.getElementsByClassName('upcoming-events__container')[0]
+
+	if (result.data.length == 0) {
+		eventContainer.innerHTML = `<p class="upcoming-events__card__description">Ainda não há eventos marcados...</p>`
+		return
+	}
 	const event = result.data[0]
-	console.log(event)
+
 	const originalDate = new Date(event.time)
 	const date = handleDate(originalDate)
 	const eventText = handleDescription(event.description)
-	const eventContainer = document.getElementsByClassName('upcoming-events__container')[0]
+
 	eventContainer.innerHTML = `
 	<div class="upcoming-events__card">
 		<h4 class="upcoming-events__card__date">${date}</h4>

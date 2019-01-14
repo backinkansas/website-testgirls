@@ -1,5 +1,11 @@
+@import './variables.scss';
+
 body {
     margin: 0;
     background-color: #FDFEFF;
+}
+
+.intro {
+    font-family: $font-cards;
 }
 

@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+.founders section-body h3 {
+  font-family: $font-titles;
+  color: $dark-gray;
+  display: inline-block;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.founders__card {
+  text-align: center;
+}
+
+.founders__description {
+  margin-bottom: 0;
+}
+
+.founders__card img {
+  width: 150px;
+}
+
+.founders__name {
+  font-size: 25px;
+}
+
+.founders__contact {
+  margin-bottom: 30px;
+}
+
+.founders__contact img {
+  display: inline-block;
+  width: 30px;
+  margin-right: 20px;
+}
+
+@media (min-width: 600px) {
+  .founders__container {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .founders__card {
+    grid-row: 1;
+    margin: 30px;
+  }
+
+  .founders__contact {
+    margin-top: 30px;
+  }
+}

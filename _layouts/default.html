@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="module" src="/assets/js/meetupAPI.js"></script>
   </head>
   <body>
     <header class="header">
@@ -17,5 +16,11 @@
       <h2 class="header__tagline--side">}</h2>
     </header>
     {{ content }}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="/assets/js/upcoming-events.js"></script>
+    <script type="module" src="/assets/js/past-events.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/moment.js"></script>
   </body>
 </html>

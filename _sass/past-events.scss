@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+.past-events__card {
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+  font-family: $font-cards;
+  color: $dark-gray;
+}
+
+.past-events__card img {
+  width: 100%;
+  height: 165px;
+}
+
+.past-events__previous, .past-events__next {
+  position: absolute;
+  top:20%;
+  z-index: 10;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 50px;
+  font-weight: 900;
+  color: $dark-gray;
+}
+
+.past-events__previous {
+  left: -30px;
+}
+
+.past-events__next {
+  right: -30px;
+}

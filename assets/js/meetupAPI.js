@@ -26,7 +26,12 @@ function handleDescription(text) {
 function createMarkUp(container, collection) {
 
 	if (collection.length == 0) {
-		container.innerHTML = `<p class="upcoming-events__card__description">Ainda não há eventos marcados...</p>`
+		container.innerHTML = `
+			<div class="upcoming-events__card">
+				<div class="upcoming-events__card__content">
+					<p class="upcoming-events__card__description">Ainda não há eventos marcados...</p>
+				</div>
+			</div>`
 		return
 	}
 

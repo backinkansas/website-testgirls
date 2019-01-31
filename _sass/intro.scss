@@ -1,11 +1,21 @@
 @import './variables.scss';
 
 .intro p {
-  font-size: 25px;
+  font-family: $font-titles;
+  font-size: 14px;
+  font-weight: 600;
   text-align: center;
+  margin: 19px;
 }
 
 .intro img {
   display: block;
   width: 100%;
+}
+
+@media (min-width: 600px) {
+  .intro p {
+    font-size: 36px;
+    margin: 40px;
+  }
 }
